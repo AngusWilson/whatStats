@@ -33,7 +33,7 @@ chat:chat (til count chat) except raze longMsgs
 time:trim each last each tSplit:"," vs/: first each split:"-" vs/: chat
 date:"D"$ "." sv/: reverse each "/" vs/: first each tSplit
 
-/handle 12hr clock and
+/handle 12hr clock
 twelves:"12"~/:time[;0 1]
 pms:"pm"~/:-2#/:time
 time:@["T"$first each " " vs/: time;where pms and not twelves;+;12*60*60*1000]
